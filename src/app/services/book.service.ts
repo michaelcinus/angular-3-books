@@ -10,8 +10,8 @@ export class BookService {
 
   constructor( ) { 
     this.books.push(
-      { title: 'primo libro', author: 'primo levi', year: 2020},
-      { title: 'secondo libro', author: 'secondo levi', year: 2021}
+      { id: 1, title: 'primo libro', author: 'primo levi', year: 2020},
+      { id: 2, title: 'secondo libro', author: 'secondo levi', year: 2021}
     )
    }
 

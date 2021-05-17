@@ -11,9 +11,14 @@ export class BookFormComponent implements OnInit {
   book_: Book = {};
   bookModel: Book = {};
 
+
   @Input()
   set book ( b: Book) {
     this.book_ = b;
+    this.bookModel.id = b.id;
+    this.bookModel.title = b.title;
+    this.bookModel.author = b.author;
+    this.bookModel.year = b.year;
   }
 
   get book ( ) {
@@ -25,13 +30,15 @@ export class BookFormComponent implements OnInit {
 
   constructor() {
     this.feedbackEv = new EventEmitter<Book>();
+    this.bookModel.id = 0;
   }
 
   ngOnInit(): void {
   }
 
   onSubmit() {
-    this.feedbackEv.emit(this.book_);
+    this.feedbackEv.emit(this.bookModel);
+    this.bookModel = {};
   }
 
 

@@ -20,6 +20,7 @@ export class BookPageComponent implements OnInit {
   }
 
   addBookEvent( b: Book) {
+    b.id = 2;
     this.bookService.add(b);
   }
 
