@@ -1,0 +1,14 @@
+<div class="container" style="margin-top: 15vh; margin-bottom: 15vh;">
+    <div class="row">
+        <div class="col-lg-6">
+            <div *ngFor="let b of books">
+                <h1>{{ b.title }}</h1>
+                <h2>{{ b. author }}</h2>
+                <button class="btn btn-success" (click) = "selectionClick(b)">Edit</button>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <app-book-form (feedbackEv) = "addBookEvent($event)" [book] = "selectedBook"></app-book-form>
+        </div>
+    </div>
+</div>

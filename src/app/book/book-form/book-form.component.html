@@ -1,0 +1,12 @@
+<form class="form" (ngSubmit)="onSubmit()" #bookForm="ngForm">
+    <label for="">Title</label>
+    <input id="title" name="title" class="form-control" type="text" #title [(ngModel)]="book_.title">
+
+    <label for="">Author</label>
+    <input class="form-control" name="author" id="author" type="text" #author [(ngModel)]="book_.author">
+
+    <label for="">Year</label>
+    <input type="number" class="form-control" name="year" id="year" #year [(ngModel)]="book_.year">
+    <br>
+    <button type="submit" class="btn btn-warning">Add Book</button>
+</form>
